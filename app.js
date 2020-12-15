@@ -20,7 +20,7 @@ class Permute {
         //We Save all the items in the array
         let possiblePermutation = [];
 
-        if(input.length === 0) return '';
+        if (input.length === 0) return '';
         if (input.length == 1) return `Sorry there's not much we can do about one character 😁`;
 
         //Permute dor two character
@@ -39,7 +39,7 @@ class Permute {
     renderHtml = () => {
         let data = this.findPermute(this.value);
         if (!Array.isArray(data)) {
-            list.innerHTML = data;
+            list.innerHTML = `<p>${data}</p>`;
         }
 
         data.forEach(item => {
